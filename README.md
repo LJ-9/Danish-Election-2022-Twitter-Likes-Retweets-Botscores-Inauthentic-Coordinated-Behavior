@@ -24,7 +24,7 @@ The dataset contains the following:
 
 ## 1. /Raw Data/Pull-All_fv22.zip
 
-### Tweet IDs, Liking Users and Retweeting Users live scraped DATE to DATE
+### Tweet IDs, Liking Users and Retweeting Users live scraped from Oct. 7th and 30 days forward
 
 Runningly, we collected the user identities of liking and retweeting users, with the algorithm described in [this paper](URL) using the code from [this repo](https://github.com/humanplayer2/get-twitter-likers-data).
 
