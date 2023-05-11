@@ -17,7 +17,7 @@ Botometer guidelines suggest that we should have looked up botscores runningly a
 
 *Code on Dataset:* To use the code in thes repo on the dataset, clone the repo and download the dataset, extract `Data from ... Election 2022/Raw Data/Pull-All_fv22.zip` and place the `Pull-All_fv22` directory in the repo root.
 
-*Much more Information:* For much more information on the research motivation for creating this dataset and undertaking the analysis, please see the introduction to the PhD thesis TODO [Curbing Amplification Online: Towards Improving the Quality of Information Spread on Social Media Using Agent-Based Models and Twitter Data](URL) by Laura Jahn, University of Copenhagen, 2023.
+*Much more Information:* For much more information on the research motivation for creating this dataset and undertaking the analysis, please see the introduction to the PhD thesis [Curbing Amplification Online: Towards Improving the Quality of Information Spread on Social Media Using Agent-Based Models and Twitter Data](https://github.com/LJ-9/Danish-Election-2022-Twitter-Likes-Retweets-Botscores-Inauthentic-Coordinated-Behavior/blob/main/documents/Jahn_Laura_PhD_Thesis_2023_online.pdf) by Laura Jahn, University of Copenhagen, 2023.
 
 # Dataset components
 The dataset contains the following:
