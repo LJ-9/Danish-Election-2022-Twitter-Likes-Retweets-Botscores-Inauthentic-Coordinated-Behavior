@@ -185,7 +185,7 @@ literal "false"
 
 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 The Botometer 101 paper has a nice sentecne summarizing references on election
@@ -242,7 +242,7 @@ literal "false"
  See the directory 
 \emph on
 Data from Danish Twitter on National Election 2022
-\change_inserted -1069254822 1684152564
+\change_inserted -1069254822 1684149727
 
 \emph default
  in the Harvard repository
@@ -898,12 +898,8 @@ botlike
 \change_inserted -1069254822 1684152062
 Botometer Lite
 \change_unchanged
- score
-\change_inserted -1069254822 1684153045
-s
-\change_unchanged
-, and the size of a cluster did not correlate with how many of its users
- had disappe
+ score, and the size of a cluster did not correlate with how many of its
+ users had disappe
 \change_inserted -1069254822 1684152039
 a
 \change_unchanged

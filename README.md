@@ -1,23 +1,23 @@
 # Danish National Election 2022 Twitter Data on Likes, Retweets, and Botscores for the purpose of exploring Coordinated Inauthenthic Behavior
 
 
-This repository contains code related to the dataset on the Danish National Election 2022, available at [Harvard Dataverse](https://doi.org/10.7910/DVN/RWPZUN). See the directory *Data from Danish Twitter on National Election 2022*.
+This repository contains code related to the dataset on the Danish National Election 2022, available at [Harvard Dataverse](https://doi.org/10.7910/DVN/RWPZUN). See the directory *Data from Danish Twitter on National Election 2022* in the Harvard repository.
 
-We cluster users in to bins of users that showed exactly the same liking/retweeting behavior over the period. To investigate whether any of these bins exhibited *coordinated inauthenthic behavior*, we were interested in whether bin size correlated with
+We cluster Twitter users in to bins of users that showed exactly the same liking/retweeting behavior over the period. To investigate whether any of these bins exhibited *coordinated inauthenthic behavior*, we were interested in whether bin size correlated with
 - user account deletion/suspension (we bought some likes at some point, and saw that the user accounts disappered rather quickly)
 - high bot scores from Botometer / Botometer Lite.
-We didn't find any correlations. Also not between Botometer and Botometer Lite scores.
+We didn't find significant correlations. Neither, and somewhat surprisingly between  Botometer and Botometer Lite scores.
 
 *Dates for Data Collection:*
-- 1. Nov. 2022 was the election date.
-- Oct. 7, 2022 and 30 days forward we scraped with the query *#dkpol -is:retweet OR  #fv22 -is:retweet OR #fv2022 -is:retweet*. See `Pull-All_fv22/parameters.py`.
-- Late January to Mid February we looked up user account information and botscores.
+- November 1 2022: Election date.
+- October 7 2022 and 30 days forward: we scraped with the query *#dkpol -is:retweet OR  #fv22 -is:retweet OR #fv2022 -is:retweet*. See `Pull-All_fv22/parameters.py`.
+- Late January to Mid February: we looked up user account information and botscores.
 
-Botometer guidelines suggest that we should have looked up botscores runningly as they are somewhat time sensitive, but honestly, checking for correlation with botscores came as an afterthought to the general data collection.
+Botometer guidelines suggest that we should have looked up botscores runningly as they are somewhat time sensitive. Checking for correlation with botscores, however, came as an afterthought to the general data collection.
 
-*Code on Dataset:* To use the code in thes repo on the dataset, clone the repo and download the dataset, extract `Data from ... Election 2022/Raw Data/Pull-All_fv22.zip` and place the `Pull-All_fv22` directory in the repo root.
+*Code on Dataset:* To use the code in this repo on the dataset, clone the repo and download the dataset, extract `Data from ... Election 2022/Raw Data/Pull-All_fv22.zip` and place the `Pull-All_fv22` directory in the repo root.
 
-*Much more Information:* For much more information on the research motivation for creating this dataset and undertaking the analysis, please see the introduction to the PhD thesis [Curbing Amplification Online: Towards Improving the Quality of Information Spread on Social Media Using Agent-Based Models and Twitter Data](https://github.com/LJ-9/Danish-Election-2022-Twitter-Likes-Retweets-Botscores-Inauthentic-Coordinated-Behavior/blob/main/documents/Jahn_Laura_PhD_Thesis_2023_online.pdf) by Laura Jahn, University of Copenhagen, 2023.
+*Much more Information:* For much more information on the research motivation for creating this dataset and undertaking the analysis, please see the introduction to the PhD thesis [Curbing Amplification Online: Towards Improving the Quality of Information Spread on Social Media Using Agent-Based Models and Twitter Data](https://github.com/LJ-9/Danish-Election-2022-Twitter-Likes-Retweets-Botscores-Inauthentic-Coordinated-Behavior/blob/main/documents/Jahn_Laura_PhD_Thesis_2023_online.pdf) by Laura Jahn, University of Copenhagen, 2023. A related paper extensively discussing data collection and preliminary analysis on the same type of data (likes) can be found on [arXiv](https://arxiv.org/abs/2305.07384) and the corresponding [GitHub repository](https://github.com/humanplayer2/get-twitter-likers-data).
 
 # Dataset components
 The dataset contains the following:
@@ -26,9 +26,9 @@ The dataset contains the following:
 
 ### Tweet IDs, Liking Users and Retweeting Users live scraped from Oct. 7th and 30 days forward
 
-Runningly, we collected the user identities of liking and retweeting users, with the algorithm described in [this paper](URL) using the code from [this repo](https://github.com/humanplayer2/get-twitter-likers-data).
+Runningly, we collected the user identities of liking and retweeting users, with the algorithm described in [this paper](https://arxiv.org/abs/2305.07384) using the code from [this repo](https://github.com/humanplayer2/get-twitter-likers-data).
 
-The dataset contains the collected data, time stamped. I.e., for every ~5 minutes in the scrap period, there is a file of the last 48 hours' tweet IDs, and lists of liking and retweeting users. See the linked-to repo for information on the directory and file structure.
+The dataset contains the collected data, time stamped. I.e., for every ~5 minutes in the scrape period, there is a file of the last 48 hours' tweet IDs, and lists of liking and retweeting users. See the linked-to repo for information on the directory and file structure.
 
 This repo contains code to process these rather raw files. In addition to this readme, you can also go through the file `analysis/Pull-fv22-treatment.py` for a bit of practical code.
 
@@ -47,13 +47,12 @@ The `binarymatrices.zip` file contains two Tweet IDs x User IDs matrices (one fo
 
 
 ### 2.1 /Preprocessed Data/Botscores
-Contains for every liking user / retweeting user observed during the live scrape,
-their botscores according to [Botometer v4](LINK) and [Botometer Lite](LINK).
+Contains botscores for every liking user / retweeting user observed during the live scrape, according to [Botometer v4](https://cnets.indiana.edu/blog/2020/09/01/botometer-v4/) and [Botometer Lite](https://botometer.osome.iu.edu/botometerlite).
 
 Collected using `botscores_v4.sh` and `botscores_lite.sh`.
 
 ### 2.2 /Preprocessed Data/Clusters
-Contains analyses of the binary matricies, where users have been grouped if they share the exact same liking / retweeting behavior. As described in [this other paper](link).
+Contains analyses of the binary matrices, where users have been grouped if they share the exact same liking / retweeting behavior. As described in [this other paper](https://arxiv.org/abs/2305.07384).
 
 The clustering/binning was done using `/analysis/binning.sh`.
 
@@ -66,17 +65,17 @@ To improve the live scraped data, we have since used Twitter's updated API allow
 
 This data should, if no users were deleted or unliked, contain the same information as the live scraped data.
 
-See the section *Disclaimer for Article II* in the PhD thesis [Curbing Amplification Online](URL) for more information.
+See the section *Disclaimer for Article II* in the PhD thesis [Curbing Amplification Online](https://github.com/LJ-9/Danish-Election-2022-Twitter-Likes-Retweets-Botscores-Inauthentic-Coordinated-Behavior/blob/main/documents/Jahn_Laura_PhD_Thesis_2023_online.pdf) for more information.
 
 This paginated data was collected using the [twarc2 package](https://twarc-project.readthedocs.io/en/latest/twarc2_en_us/), using the scripts `analysis/twarc-lookup-liking-users.sh` and `analysis/twarc-lookup-retweeting-users.sh`. As we had multiple bearer tokens available, we split the user lists using `twarc-split-user-list.py` into sublists so we could collect data in parallel.
 
 # Testing for Correlations: Conclusions
 
 Again, we were mostly interested in whether the correlation in liking/retweeting behavior among users correlated with
-- user account deletion/suspension, creation date
+- user account deletion/suspension, creation date, and/or
 - high bot scores from Botometer / Botometer lite.
 
-We didn't find any correlations: The size of a user's cluster of identitically liking/retweeting users did not correlate with the user's botscore or botlike score, and the size of a cluster did not correlate with how many of its users had disappered. Also, Botometer and Botometer Lite scores did not correlate with one another.
+We did not find any significant correlations: The size of a user's cluster of identically liking/retweeting users did not correlate with the user's Botometer scores or Botometer Lite scores, and the size of a cluster did not correlate with how many of its users had disappered. Also, Botometer and Botometer Lite scores did not correlate with one another.
 
 ## To replicate:
 
@@ -98,12 +97,12 @@ In a bit more detail, the feature frames we created to check for correlated feat
 - screenname
 - Botscores
   - All 8 raw, universal Botometer v4 botscores, such as *overall*, *fake follower*, *astroturf*
-  - Botometer lite score
+  - Botometer Lite score
 
 2. Run `analysis/correlation-coeff.py`: Loads the feature frame and inspects data, e.g.:
 - slices dataframe to filter for users in large bins
 - computes the Pearson correlation coefficient across all columns
-- plots histogramms comparing users' different features, e.g. bin size and bot scores
+- plots histograms comparing users' different features, e.g. bin size and bot scores
 
 
 # Various Notes:
