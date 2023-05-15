@@ -61,7 +61,7 @@ between Botometer and Botometer Lite scores.
 \item November 1, 2022: Election date.
 \item October 7, 2022 and 30 days forward: we scraped with the query \emph{\#dkpol
 -is:retweet OR \#fv22 -is:retweet OR \#fv2022 -is:retweet}. See \texttt{Pull-All\_fv22/parameters.py}.
-\item Late January to Mid February: we looked up user account information
+\item Late January to Mid February 2023: we looked up user account information
 and botscores.
 \end{itemize}
 Botometer guidelines suggest that we should have looked up botscores
@@ -83,7 +83,7 @@ in the repo root.\medskip{}
 
 For much more information on the research motivation for creating
 this dataset and undertaking the analysis, please see the introduction
-to the PhD thesis \textbf{\href{https://github.com/LJ-9/Danish-Election-2022-Twitter-Likes-Retweets-Botscores-Inauthentic-Coordinated-Behavior/blob/main/documents/Jahn_Laura_PhD_Thesis_2023_online.pdf}{Curbing Amplification Online: Towards Improving the Quality of Information Spread on Social Media Using Agent-Based Models and Twitter Data}}
+to the \href{https://github.com/LJ-9/Danish-Election-2022-Twitter-Likes-Retweets-Botscores-Inauthentic-Coordinated-Behavior/blob/main/documents/Jahn_Laura_PhD_Thesis_2023_online.pdf}{PhD thesis} \emph{Curbing Amplification Online: Towards Improving the Quality of Information Spread on Social Media Using Agent-Based Models and Twitter Data}
 by Laura Jahn, University of Copenhagen, 2023 \cite{LauraThesis}.
 A related paper extensively discussing data collection and preliminary
 analysis on the same type of data (likes) can be found on \href{https://arxiv.org/abs/2305.07384}{arXiv}
@@ -123,8 +123,8 @@ RAM Linux machine, so we supplemented it with an additional 2 TB NVMe
 disk, allocated to swap space. One treatment ended up using \textasciitilde 590
 GB of that.
 
-\subsection*{2.0 /Preprocessed Data: Preprocessed using code from this repo, see
-below.}
+\subsection*{2.0 /Preprocessed Data}
+Preprocessed using code from this repo, see below.
 
 The \texttt{binarymatrices.zip} file contains two Tweet IDs $\times$
 User IDs matrices (one for likes, one for retweets), with a $1$ in
@@ -235,12 +235,12 @@ and bot scores.
 	\bibitem{JahnRendsvig22GetLikers}
 	{Jahn, Laura and Rendsvig, Rasmus~K.}
 	\newblock Get-twitter-likers-data.
-	\newblock \url{https://github.com/humanplayer2/get-twitter-likers-data/}, 2022.
+	\newblock \href{https://github.com/humanplayer2/get-twitter-likers-data/}{github.com/humanplayer2/get-twitter-likers-data/}, 2022.
 	
 	\bibitem{JahnRendsvigTwitterLikesCIB}
 	{Jahn, Laura and Rendsvig, Rasmus~K.}
 	\newblock {Towards Detecting Inauthentic Coordination in Twitter Likes Data}.
-	\newblock {\em arXiv}, 2023.
+	\newblock {\em arXiv}, \href{https://doi.org/10.48550/arXiv.2305.07384}{https://doi.org/10.48550/arXiv.2305.07384}, 2023. 
 	
 	\end{thebibliography}
 	
