@@ -92,7 +92,6 @@ algolyx
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
-\author -1069254822 "Laura "
 \end_header
 
 \begin_body
@@ -178,7 +177,7 @@ literal "false"
 
 \end_inset
 
-, Check out Fig 1 in this paper and for our user analysis 
+, Check out Fig 1 in this paper and for our user analysis
 \end_layout
 
 \end_inset
@@ -224,12 +223,8 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
-The reposit
-\change_deleted -1069254822 1684149703
-i
-\change_unchanged
-ory contains code related to the dataset on the Danish National Election
- 2022, available at 
+The repository contains code related to the dataset on the Danish National
+ Election 2022, available at 
 \begin_inset CommandInset href
 LatexCommand href
 name "Harvard Dataverse"
@@ -242,30 +237,18 @@ literal "false"
  See the directory 
 \emph on
 Data from Danish Twitter on National Election 2022
-\change_inserted -1069254822 1684152564
-
 \emph default
- in the Harvard repository
-\change_unchanged
-.
+ in the Harvard repository.
 \end_layout
 
 \begin_layout Standard
-We cluster 
-\change_inserted -1069254822 1684149735
-Twitter 
-\change_unchanged
-users in
-\change_deleted -1069254822 1684149758
- 
-\change_unchanged
-to bins of users that showed exactly the same liking/retweeting behavior
- over the period.
+We cluster Twitter users into bins of users that showed exactly the same
+ liking/retweeting behavior over the period.
  To investigate whether any of these bins exhibited 
 \emph on
 coordinated inauthentic behavior
 \emph default
-, we were interested in whether bin size correlated with 
+, we were interested in whether bin size correlated with
 \end_layout
 
 \begin_layout Itemize
@@ -275,74 +258,24 @@ user account deletion/suspension (we bought some likes at some point, and
 
 \begin_layout Itemize
 high bot scores from Botometer / Botometer Lite.
- 
 \end_layout
 
 \begin_layout Standard
-We didn't find 
-\change_deleted -1069254822 1684149781
-any
-\change_inserted -1069254822 1684149788
-significant
-\change_unchanged
- correlations.
- 
-\change_inserted -1069254822 1684149813
-Neither, and somewhat surprisingly,
-\change_deleted -1069254822 1684149818
-Also not
-\change_unchanged
- between Botometer and Botometer Lite scores.
+We didn't find significant correlations.
+ Neither, and somewhat surprisingly, between Botometer and Botometer Lite
+ scores.
 \end_layout
 
 \begin_layout Subsection*
 Dates for Data Collection
-\change_deleted -1069254822 1684150479
-:
-\change_unchanged
-
 \end_layout
 
 \begin_layout Itemize
-
-\change_inserted -1069254822 1684149857
-November 1
-\change_deleted -1069254822 1684149840
-1.
- Nov
-\change_inserted -1069254822 1684149840
-,
-\change_deleted -1069254822 1684149840
-.
-
-\change_unchanged
- 2022
-\change_inserted -1069254822 1684149846
-:
-\change_unchanged
- 
-\change_deleted -1069254822 1684149848
-was the e
-\change_inserted -1069254822 1684149848
-E
-\change_unchanged
-lection date.
- 
+November 1, 2022: Election date.
 \end_layout
 
 \begin_layout Itemize
-Oct
-\change_inserted -1069254822 1684149856
-ober
-\change_deleted -1069254822 1684149852
-.
-
-\change_unchanged
- 7, 2022 and 30 days forward
-\change_inserted -1069254822 1684149882
-:
-\change_unchanged
- we scraped with the query 
+October 7, 2022 and 30 days forward: we scraped with the query 
 \emph on
 #dkpol -is:retweet OR #fv22 -is:retweet OR #fv2022 -is:retweet
 \emph default
@@ -352,37 +285,18 @@ ober
 Pull-All_fv22/parameters.py
 \family default
 .
- 
 \end_layout
 
 \begin_layout Itemize
-Late January to Mid February
-\change_inserted -1069254822 1684149888
-:
-\change_unchanged
- we looked up user account information and botscores.
+Late January to Mid February: we looked up user account information and
+ botscores.
 \end_layout
 
 \begin_layout Standard
 Botometer guidelines suggest that we should have looked up botscores runningly
- as they are somewhat time sensitive
-\change_deleted -1069254822 1684149913
-, but honestly, 
-\change_inserted -1069254822 1684149915
-.
- C
-\change_deleted -1069254822 1684149915
-c
-\change_unchanged
-hecking for correlation
-\change_inserted -1069254822 1684149919
-s
-\change_unchanged
- with botscores
-\change_inserted -1069254822 1684149923
-, however,
-\change_unchanged
- came as an afterthought to the general data collection.
+ as they are somewhat time sensitive.
+ Checking for correlations with botscores, however, came as an afterthought
+ to the general data collection.
 \begin_inset VSpace defskip
 \end_inset
 
@@ -391,26 +305,10 @@ s
 
 \begin_layout Subsection*
 Code on Dataset
-\change_inserted -1069254822 1684150416
-
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted -1069254822 1684150415
-
-\emph on
-:
-\emph default
- 
-\change_unchanged
-To use the code in 
-\change_inserted -1069254822 1684149965
-the 
-\change_deleted -1069254822 1684149955
-thes repo
-\change_inserted -1069254822 1684149955
-
+To use the code in the 
 \begin_inset CommandInset href
 LatexCommand href
 name "GitHub repository"
@@ -419,22 +317,10 @@ literal "false"
 
 \end_inset
 
-
-\change_unchanged
  on the dataset, clone the repo and download the dataset, extract 
 \family typewriter
-Data from
-\change_inserted -1069254822 1684150028
- the directory
-\change_unchanged
- 
-\change_deleted -1069254822 1684150008
-...
- Election 2022
-\change_inserted -1069254822 1684150008
-Data from Danish Twitter on National Election 2022
-\change_unchanged
-/Raw Data/Pull-All_fv22.zip
+Data from the directory Data from Danish Twitter on National Election 2022/Raw
+ Data/Pull-All_fv22.zip
 \family default
  and place the 
 \family typewriter
@@ -449,28 +335,13 @@ Pull-All_fv22
 
 \begin_layout Subsection*
 Much more Information
-\change_inserted -1069254822 1684150373
-
 \end_layout
 
 \begin_layout Standard
-
-\change_deleted -1069254822 1684150376
-
-\emph on
-:
-\emph default
- 
-\change_unchanged
 For much more information on the research motivation for creating this dataset
  and undertaking the analysis, please see the introduction to the PhD thesis
  
-\change_deleted -1069254822 1684150785
-
 \series bold
-Curbing Amplification Online: Towards Improving the Quality of Information
- Spread on Social Media Using Agent-Based Models and Twitter Data
-\change_inserted -1069254822 1684150785
 
 \begin_inset CommandInset href
 LatexCommand href
@@ -480,8 +351,6 @@ literal "false"
 
 \end_inset
 
-
-\change_unchanged
 
 \series default
  by Laura Jahn, University of Copenhagen, 2023 
@@ -493,8 +362,6 @@ literal "false"
 \end_inset
 
 .
-
-\change_inserted -1069254822 1684150357
  A related paper extensively discussing data collection and preliminary
  analysis on the same type of data (likes) can be found on 
 \begin_inset CommandInset href
@@ -531,12 +398,10 @@ literal "false"
 \end_inset
 
 .
-\change_unchanged
-
 \end_layout
 
 \begin_layout Section*
-Dataset components 
+Dataset components
 \end_layout
 
 \begin_layout Standard
@@ -577,12 +442,8 @@ literal "false"
 
 \begin_layout Standard
 The dataset contains the collected data, time stamped.
- I.e., for every ~5 minutes in the scrap
-\change_inserted -1069254822 1684151621
-e
-\change_unchanged
- period, there is a file of the last 48 hours' tweet IDs, and lists of liking
- and retweeting users.
+ I.e., for every ~5 minutes in the scrape period, there is a file of the last
+ 48 hours' tweet IDs, and lists of liking and retweeting users.
  See the linked-to repo for information on the directory and file structure.
 \end_layout
 
@@ -611,7 +472,7 @@ Note:
 
 \begin_layout Section*
 2.
- /Preprocessed Data 
+ /Preprocessed Data
 \end_layout
 
 \begin_layout Standard
@@ -660,7 +521,6 @@ binarymatrices.zip
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Itemize
@@ -670,21 +530,12 @@ binarymatrices.sh
 \end_layout
 
 \begin_layout Subsection*
-2.1 /Preprocessed Data/Botscores 
+2.1 /Preprocessed Data/Botscores
 \end_layout
 
 \begin_layout Standard
-Contains
-\change_inserted -1069254822 1684151710
- botscores
-\change_unchanged
- for every liking user / retweeting user observed during the live scrape
-\change_deleted -1069254822 1684151716
-, their botscores 
-\change_inserted -1069254822 1684151717
-, 
-\change_unchanged
-according to 
+Contains botscores for every liking user / retweeting user observed during
+ the live scrape, according to 
 \begin_inset CommandInset href
 LatexCommand href
 name "Botometer v4"
@@ -716,16 +567,12 @@ botscores_lite.sh
 \end_layout
 
 \begin_layout Subsection*
-2.2 /Preprocessed Data/Clusters 
+2.2 /Preprocessed Data/Clusters
 \end_layout
 
 \begin_layout Standard
-Contains analyses of the binary matric
-\change_deleted -1069254822 1684151780
-i
-\change_unchanged
-es, where users have been grouped if they share the exact same liking /
- retweeting behavior.
+Contains analyses of the binary matrices, where users have been grouped
+ if they share the exact same liking / retweeting behavior.
  As described in 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -746,7 +593,7 @@ The clustering/binning was done using
 \end_layout
 
 \begin_layout Subsection*
-2.3 /Preprocessed Data/Later Users and Tweets Lookups 
+2.3 /Preprocessed Data/Later Users and Tweets Lookups
 \end_layout
 
 \begin_layout Itemize
@@ -754,7 +601,7 @@ The clustering/binning was done using
 \family typewriter
 latercounts.pkl
 \family default
-: look up of all tweets to get their like and retweet counts, 
+: look up of all tweets to get their like and retweet counts,
 \end_layout
 
 \begin_layout Itemize
@@ -767,9 +614,7 @@ laterusers.pkl
 \end_layout
 
 \begin_layout Subsection*
-2.4 /Preprocessed Data/Likers Retweeters Pagination 
-\change_inserted -1069254822 1684151797
-
+2.4 /Preprocessed Data/Likers Retweeters Pagination
 \end_layout
 
 \begin_layout Standard
@@ -788,10 +633,6 @@ See the section
 Disclaimer for Article II
 \emph default
  in the 
-\change_deleted -1069254822 1684151837
-PhD thesis
-\change_inserted -1069254822 1684151837
-
 \begin_inset CommandInset href
 LatexCommand href
 name "PhD thesis"
@@ -800,8 +641,6 @@ literal "false"
 
 \end_inset
 
-
-\change_unchanged
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -846,68 +685,22 @@ Testing for Correlations: Conclusions
 
 \begin_layout Standard
 Again, we were mostly interested in whether the correlation in liking/retweeting
- behavior among users correlated with 
-\change_inserted -1069254822 1684151986
-
+ behavior among users correlated with
 \end_layout
 
 \begin_layout Itemize
-
-\change_deleted -1069254822 1684151986
-- 
-\change_unchanged
-user account deletion/suspension, creation date
-\change_inserted -1069254822 1684152001
-, and/or
+user account deletion/suspension, creation date, and/or
 \end_layout
 
 \begin_layout Itemize
-
-\change_deleted -1069254822 1684151992
- - 
-\change_unchanged
 high bot scores from Botometer / Botometer lite.
 \end_layout
 
 \begin_layout Standard
-We did
-\change_inserted -1069254822 1684152293
- not
-\change_deleted -1069254822 1684152291
-n't
-\change_unchanged
- find any 
-\change_inserted -1069254822 1684152007
-significant 
-\change_unchanged
-correlations: The size of a user's cluster of 
-\change_deleted -1069254822 1684152018
-identitically
-\change_inserted -1069254822 1684152018
-identically
-\change_unchanged
- liking/retweeting users did not correlate with the user's 
-\change_deleted -1069254822 1684152048
-botscore
-\change_inserted -1069254822 1684152050
-Botometer scores
-\change_unchanged
- or 
-\change_deleted -1069254822 1684152058
-botlike
-\change_inserted -1069254822 1684152062
-Botometer Lite
-\change_unchanged
- score
-\change_inserted -1069254822 1684153045
-s
-\change_unchanged
-, and the size of a cluster did not correlate with how many of its users
- had disappe
-\change_inserted -1069254822 1684152039
-a
-\change_unchanged
-red.
+We did not find any significant correlations: The size of a user's cluster
+ of identically liking/retweeting users did not correlate with the user's
+ Botometer scores or Botometer Lite scores, and the size of a cluster did
+ not correlate with how many of its users had disappeared.
  Also, Botometer and Botometer Lite scores did not correlate with one another.
 \end_layout
 
@@ -927,74 +720,68 @@ analysis/features-frame.py
 
 \begin_layout Standard
 In a bit more detail, the feature frames we created to check for correlated
- features included the following: 
+ features included the following:
 \end_layout
 
 \begin_layout Itemize
-binsize: size of bin/cluster the user is grouped into 
+binsize: size of bin/cluster the user is grouped into
 \end_layout
 
 \begin_layout Itemize
-user-ID 
+user-ID
 \end_layout
 
 \begin_layout Itemize
-error_title: result from user look-ups 
+error_title: result from user look-ups
 \end_layout
 
 \begin_layout Itemize
-error_detail 
+error_detail
 \end_layout
 
 \begin_layout Itemize
-name 
+name
 \end_layout
 
 \begin_layout Itemize
-created_at: creation date of user account 
+created_at: creation date of user account
 \end_layout
 
 \begin_layout Itemize
-protected: whether user account is private 
+protected: whether user account is private
 \end_layout
 
 \begin_layout Itemize
-verified: whether user account is verified 
+verified: whether user account is verified
 \end_layout
 
 \begin_layout Itemize
-followers_count: number of followers of user 
+followers_count: number of followers of user
 \end_layout
 
 \begin_layout Itemize
-following_count: number of accounts the user follows 
+following_count: number of accounts the user follows
 \end_layout
 
 \begin_layout Itemize
-tweet_count: number of posted tweets by user 
+tweet_count: number of posted tweets by user
 \end_layout
 
 \begin_layout Itemize
-listed_count: number of public lists that user is a member of 
+listed_count: number of public lists that user is a member of
 \end_layout
 
 \begin_layout Itemize
-screenname - Botscores 
+screenname - Botscores
 \end_layout
 
 \begin_layout Itemize
 All 8 raw, universal Botometer v4 botscores, such as *overall*, *fake follower*,
- *astroturf* 
+ *astroturf*
 \end_layout
 
 \begin_layout Itemize
-Botometer 
-\change_inserted -1069254822 1684152088
-L
-\change_deleted -1069254822 1684152088
-l
-\change_unchanged
-ite score
+Botometer Lite score
 \end_layout
 
 \begin_layout Standard
@@ -1003,38 +790,20 @@ ite score
 \family typewriter
 analysis/correlation-coeff.py
 \family default
-: Loads the feature frame and inspects data, e.g.: 
+: Loads the feature frame and inspects data, e.g.:
 \end_layout
 
 \begin_layout Itemize
-slices dataframe to filter for users in large bins
-\change_inserted -1069254822 1684152095
-,
-\change_unchanged
- 
+slices dataframe to filter for users in large bins,
 \end_layout
 
 \begin_layout Itemize
-computes the Pearson correlation coefficient across all columns
-\change_inserted -1069254822 1684152099
-,
-\change_unchanged
- 
+computes the Pearson correlation coefficient across all columns,
 \end_layout
 
 \begin_layout Itemize
-plots 
-\change_deleted -1069254822 1684152103
-histogramms
-\change_inserted -1069254822 1684152103
-histograms
-\change_unchanged
- comparing users' different features, e.g.
- bin size and bot scores
-\change_inserted -1069254822 1684152104
-.
-\change_unchanged
-
+plots histograms comparing users' different features, e.g.
+ bin size and bot scores.
 \end_layout
 
 \begin_layout Standard
