@@ -1,0 +1,822 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\options sigconf,authoryear,nonacm
+\use_default_options true
+\begin_modules
+algolyx
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 1
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 0
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\branch Proofs
+\selected 0
+\filename_suffix 0
+\color #ffffff
+\end_branch
+\branch AltProof
+\selected 0
+\filename_suffix 0
+\color #ffffff
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\bullet 0 0 9 -1
+\tracking_changes true
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Danish National Election 2022 Twitter Data on Likes, Retweets, and Botscores
+ for the purpose of exploring Coordinated Inauthenthic Behavior
+\end_layout
+
+\begin_layout Author
+Laura Jahn
+\begin_inset Formula $^{1}$
+\end_inset
+
+ and Rasmus K.
+ Rendsvig
+\begin_inset Formula $^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Address
+1,2: Center for Information and Bubble Studies, University of Copenhagen
+\begin_inset Newline newline
+\end_inset
+
+1: 
+\begin_inset CommandInset href
+LatexCommand href
+name "laurajahn@outlook.de"
+target "laurajahn@outlook.de"
+type "mailto:"
+literal "false"
+
+\end_inset
+
+, ORCID: 
+\begin_inset CommandInset href
+LatexCommand href
+name "0000-0002-5475-8496"
+target "https://orcid.org/0000-0002-5475-8496"
+literal "false"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+2: 
+\begin_inset CommandInset href
+LatexCommand href
+name "rendsvig@gmail.com"
+target "rendsvig@gmail.com"
+type "mailto:"
+literal "false"
+
+\end_inset
+
+, ORCID: 
+\begin_inset CommandInset href
+LatexCommand href
+name "0000-0002-5475-8496"
+target "https://orcid.org/0000-0002-5475-8496"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+2023: Relevant paper!: 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ng_coordination22"
+literal "false"
+
+\end_inset
+
+, Check out Fig 1 in this paper and for our user analysis
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The Botometer 101 paper has a nice sentecne summarizing references on election
+ papers: 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Yang2022"
+literal "false"
+
+\end_inset
+
+: Studies have iden- tified interference of social bots in U.S.
+ elections [2, 3, 4, 5], French elections [6], the Brexit referendum [7,
+ 8, 3, 9], German elections [10], and the 2017 Catalan referen- dum [11].
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+This note primarily contains the README.md from the 
+\begin_inset CommandInset href
+LatexCommand href
+name "GitHub repository"
+target "https://github.com/LJ-9/Danish-Election-2022-Twitter-Likes-Retweets-Botscores-Inauthentic-Coordinated-Behavior"
+literal "false"
+
+\end_inset
+
+ of the same name, with a few additional comments and references.
+ We upload the note for visibility, hoping that other researchers may find
+ the data of use.
+\end_layout
+
+\begin_layout Standard
+The repository contains code related to the dataset on the Danish National
+ Election 2022, available at 
+\begin_inset CommandInset href
+LatexCommand href
+name "Harvard Dataverse"
+target "https://doi.org/10.7910/DVN/RWPZUN"
+literal "false"
+
+\end_inset
+
+.
+ See the directory 
+\emph on
+Data from Danish Twitter on National Election 2022
+\emph default
+ in the Harvard repository.
+\end_layout
+
+\begin_layout Standard
+We cluster Twitter users into bins of users that showed exactly the same
+ liking/retweeting behavior over the period.
+ To investigate whether any of these bins exhibited 
+\emph on
+coordinated inauthentic behavior
+\emph default
+, we were interested in whether bin size correlated with
+\end_layout
+
+\begin_layout Itemize
+user account deletion/suspension (we bought some likes at some point, and
+ saw that the user accounts disappeared rather quickly)
+\end_layout
+
+\begin_layout Itemize
+high bot scores from Botometer / Botometer Lite.
+\end_layout
+
+\begin_layout Standard
+We didn't find significant correlations.
+ Neither, and somewhat surprisingly, between Botometer and Botometer Lite
+ scores.
+\end_layout
+
+\begin_layout Subsection*
+Dates for Data Collection
+\end_layout
+
+\begin_layout Itemize
+November 1, 2022: Election date.
+\end_layout
+
+\begin_layout Itemize
+October 7, 2022 and 30 days forward: we scraped with the query 
+\emph on
+#dkpol -is:retweet OR #fv22 -is:retweet OR #fv2022 -is:retweet
+\emph default
+.
+ See 
+\family typewriter
+Pull-All_fv22/parameters.py
+\family default
+.
+\end_layout
+
+\begin_layout Itemize
+Late January to Mid February: we looked up user account information and
+ botscores.
+\end_layout
+
+\begin_layout Standard
+Botometer guidelines suggest that we should have looked up botscores runningly
+ as they are somewhat time sensitive.
+ Checking for correlations with botscores, however, came as an afterthought
+ to the general data collection.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Code on Dataset
+\end_layout
+
+\begin_layout Standard
+To use the code in the 
+\begin_inset CommandInset href
+LatexCommand href
+name "GitHub repository"
+target "https://github.com/LJ-9/Danish-Election-2022-Twitter-Likes-Retweets-Botscores-Inauthentic-Coordinated-Behavior"
+literal "false"
+
+\end_inset
+
+ on the dataset, clone the repo and download the dataset, extract 
+\family typewriter
+Data from the directory Data from Danish Twitter on National Election 2022/Raw
+ Data/Pull-All_fv22.zip
+\family default
+ and place the 
+\family typewriter
+Pull-All_fv22
+\family default
+ directory in the repo root.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Much more Information
+\end_layout
+
+\begin_layout Standard
+For much more information on the research motivation for creating this dataset
+ and undertaking the analysis, please see the introduction to the PhD thesis
+ 
+\series bold
+
+\begin_inset CommandInset href
+LatexCommand href
+name "Curbing Amplification Online: Towards Improving the Quality of Information Spread on Social Media Using Agent-Based Models and Twitter Data"
+target "https://github.com/LJ-9/Danish-Election-2022-Twitter-Likes-Retweets-Botscores-Inauthentic-Coordinated-Behavior/blob/main/documents/Jahn_Laura_PhD_Thesis_2023_online.pdf"
+literal "false"
+
+\end_inset
+
+
+\series default
+ by Laura Jahn, University of Copenhagen, 2023 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LauraThesis"
+literal "false"
+
+\end_inset
+
+.
+ A related paper extensively discussing data collection and preliminary
+ analysis on the same type of data (likes) can be found on 
+\begin_inset CommandInset href
+LatexCommand href
+name "arXiv"
+target "https://arxiv.org/abs/2305.07384"
+literal "false"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "JahnRendsvigTwitterLikesCIB"
+literal "false"
+
+\end_inset
+
+ and the corresponding 
+\begin_inset CommandInset href
+LatexCommand href
+name "GitHub repository"
+target "https://github.com/humanplayer2/get-twitter-likers-data"
+literal "false"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "JahnRendsvig22GetLikers"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+Dataset components
+\end_layout
+
+\begin_layout Standard
+The dataset contains the following:
+\end_layout
+
+\begin_layout Subsection*
+1.
+ /Raw Data/Pull-All_fv22.zip
+\end_layout
+
+\begin_layout Subsubsection*
+Tweet IDs, Liking Users and Retweeting Users live scraped from Oct.
+ 7th and 30 days forward
+\end_layout
+
+\begin_layout Standard
+Runningly, we collected the user identities of liking and retweeting users,
+ with the algorithm described in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "JahnRendsvigTwitterLikesCIB"
+literal "false"
+
+\end_inset
+
+ using the code from 
+\begin_inset CommandInset href
+LatexCommand href
+name "this repo"
+target "https://github.com/humanplayer2/get-twitter-likers-data"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The dataset contains the collected data, time stamped.
+ I.e., for every ~5 minutes in the scrape period, there is a file of the last
+ 48 hours' tweet IDs, and lists of liking and retweeting users.
+ See the linked-to repo for information on the directory and file structure.
+\end_layout
+
+\begin_layout Standard
+This repo contains code to process these rather raw files.
+ In addition to this readme, you can also go through the file 
+\family typewriter
+analysis/Pull-fv22-treatment.py
+\family default
+ for a bit of practical code.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Note:
+\emph default
+ The dataset does not contain e.g.
+ tweet text, as this cannot to shared in batch without violating Twitter's
+ terms and conditions.
+\end_layout
+
+\begin_layout Section*
+2.
+ /Preprocessed Data
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Note:
+\emph default
+ We have uploaded the processed data as it can take quite some RAM to conclude
+ the processing.
+ We ran out of memory on 128 GB RAM Linux machine, so we supplemented it
+ with an additional 2 TB NVMe disk, allocated to swap space.
+ One treatment ended up using ~590 GB of that.
+\end_layout
+
+\begin_layout Subsection*
+2.0 /Preprocessed Data: Preprocessed using code from this repo, see below.
+\end_layout
+
+\begin_layout Standard
+The 
+\family typewriter
+binarymatrices.zip
+\family default
+ file contains two Tweet IDs 
+\begin_inset Formula $\times$
+\end_inset
+
+ User IDs matrices (one for likes, one for retweets), with a 
+\begin_inset Formula $1$
+\end_inset
+
+ in 
+\begin_inset Formula $(i,j)$
+\end_inset
+
+ if user 
+\begin_inset Formula $j$
+\end_inset
+
+ liked/retweeted tweet 
+\begin_inset Formula $i$
+\end_inset
+
+, else 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Processed using 
+\family typewriter
+binarymatrices.sh
+\end_layout
+
+\begin_layout Subsection*
+2.1 /Preprocessed Data/Botscores
+\end_layout
+
+\begin_layout Standard
+Contains botscores for every liking user / retweeting user observed during
+ the live scrape, according to 
+\begin_inset CommandInset href
+LatexCommand href
+name "Botometer v4"
+target "https://cnets.indiana.edu/blog/2020/09/01/botometer-v4/"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset href
+LatexCommand href
+name "Botometer Lite"
+target "https://botometer.osome.iu.edu/botometerlite"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Collected using 
+\family typewriter
+botscores_v4.sh
+\family default
+ and 
+\family typewriter
+botscores_lite.sh
+\end_layout
+
+\begin_layout Subsection*
+2.2 /Preprocessed Data/Clusters
+\end_layout
+
+\begin_layout Standard
+Contains analyses of the binary matrices, where users have been grouped
+ if they share the exact same liking / retweeting behavior.
+ As described in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "JahnRendsvigTwitterLikesCIB"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The clustering/binning was done using 
+\family typewriter
+/analysis/binning.sh
+\family default
+.
+\end_layout
+
+\begin_layout Subsection*
+2.3 /Preprocessed Data/Later Users and Tweets Lookups
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+latercounts.pkl
+\family default
+: look up of all tweets to get their like and retweet counts,
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+laterusers.pkl
+\family default
+: look up of all user profiles e.g.
+ whether it still exists, has been suspended, error codes, etc.
+\end_layout
+
+\begin_layout Subsection*
+2.4 /Preprocessed Data/Likers Retweeters Pagination
+\end_layout
+
+\begin_layout Standard
+To improve the live scraped data, we have since used Twitter's updated API
+ allowing for pagination to re-collect the liking and retweeting users.
+\end_layout
+
+\begin_layout Standard
+This data should, if no users were deleted or unliked, contain the same
+ information as the live scraped data.
+\end_layout
+
+\begin_layout Standard
+See the section 
+\emph on
+Disclaimer for Article II
+\emph default
+ in the 
+\begin_inset CommandInset href
+LatexCommand href
+name "PhD thesis"
+target "https://github.com/LJ-9/Danish-Election-2022-Twitter-Likes-Retweets-Botscores-Inauthentic-Coordinated-Behavior/blob/main/documents/Jahn_Laura_PhD_Thesis_2023_online.pdf"
+literal "false"
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LauraThesis"
+literal "false"
+
+\end_inset
+
+ for more information.
+\end_layout
+
+\begin_layout Standard
+This paginated data was collected using the 
+\begin_inset CommandInset href
+LatexCommand href
+name "twarc2 package"
+target "https://twarc-project.readthedocs.io/en/latest/twarc2_en_us/"
+literal "false"
+
+\end_inset
+
+, using the scripts 
+\family typewriter
+analysis/twarc-lookup-liking-users.sh
+\family default
+ and 
+\family typewriter
+analysis/twarc-lookup-retweeting-users.sh
+\family default
+.
+ As we had multiple bearer tokens available, we split the user lists using
+ 
+\family typewriter
+twarc-split-user-list.py
+\family default
+ into sublists so we could collect data in parallel.
+\end_layout
+
+\begin_layout Section*
+Testing for Correlations: Conclusions
+\end_layout
+
+\begin_layout Standard
+Again, we were mostly interested in whether the correlation in liking/retweeting
+ behavior among users correlated with
+\end_layout
+
+\begin_layout Itemize
+user account deletion/suspension, creation date, and/or
+\end_layout
+
+\begin_layout Itemize
+high bot scores from Botometer / Botometer lite.
+\end_layout
+
+\begin_layout Standard
+We did not find any significant correlations: The size of a user's cluster
+ of identically liking/retweeting users did not correlate with the user's
+ Botometer scores or Botometer Lite scores, and the size of a cluster did
+ not correlate with how many of its users had disappeared.
+ Also, Botometer and Botometer Lite scores did not correlate with one another.
+\end_layout
+
+\begin_layout Subsection*
+To replicate:
+\end_layout
+
+\begin_layout Standard
+1.
+ Run 
+\family typewriter
+analysis/features-frame.py
+\family default
+: Collects tweet and user information, including botscores, user cluster
+ sizes, deletions, etc.
+\end_layout
+
+\begin_layout Standard
+In a bit more detail, the feature frames we created to check for correlated
+ features included the following:
+\end_layout
+
+\begin_layout Itemize
+binsize: size of bin/cluster the user is grouped into
+\end_layout
+
+\begin_layout Itemize
+user-ID
+\end_layout
+
+\begin_layout Itemize
+error_title: result from user look-ups
+\end_layout
+
+\begin_layout Itemize
+error_detail
+\end_layout
+
+\begin_layout Itemize
+name
+\end_layout
+
+\begin_layout Itemize
+created_at: creation date of user account
+\end_layout
+
+\begin_layout Itemize
+protected: whether user account is private
+\end_layout
+
+\begin_layout Itemize
+verified: whether user account is verified
+\end_layout
+
+\begin_layout Itemize
+followers_count: number of followers of user
+\end_layout
+
+\begin_layout Itemize
+following_count: number of accounts the user follows
+\end_layout
+
+\begin_layout Itemize
+tweet_count: number of posted tweets by user
+\end_layout
+
+\begin_layout Itemize
+listed_count: number of public lists that user is a member of
+\end_layout
+
+\begin_layout Itemize
+screenname - Botscores
+\end_layout
+
+\begin_layout Itemize
+All 8 raw, universal Botometer v4 botscores, such as *overall*, *fake follower*,
+ *astroturf*
+\end_layout
+
+\begin_layout Itemize
+Botometer Lite score
+\end_layout
+
+\begin_layout Standard
+2.
+ Run 
+\family typewriter
+analysis/correlation-coeff.py
+\family default
+: Loads the feature frame and inspects data, e.g.:
+\end_layout
+
+\begin_layout Itemize
+slices dataframe to filter for users in large bins,
+\end_layout
+
+\begin_layout Itemize
+computes the Pearson correlation coefficient across all columns,
+\end_layout
+
+\begin_layout Itemize
+plots histograms comparing users' different features, e.g.
+ bin size and bot scores.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "arXiv_Note"
+options "abbrv"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
