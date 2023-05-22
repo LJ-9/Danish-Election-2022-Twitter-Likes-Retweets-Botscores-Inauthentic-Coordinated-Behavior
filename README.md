@@ -1,7 +1,7 @@
 # Danish National Election 2022 Twitter Data on Likes, Retweets, and Botscores for the purpose of exploring Coordinated Inauthenthic Behavior
 
 
-This repository contains code related to the dataset on the Danish National Election 2022, available at [Harvard Dataverse](https://doi.org/10.7910/DVN/RWPZUN). See the directory *Data from Danish Twitter on National Election 2022* in the Harvard repository.
+This repository contains code related to the dataset on the Danish National Election 2022, available at [Harvard Dataverse](https://doi.org/10.7910/DVN/RWPZUN). See the directory *Data from Danish Twitter on National Election 2022* in the Harvard repository. What follows in this note is also available on [arXiv](https://arxiv.org/abs/2305.08621).
 
 We cluster Twitter users in to bins of users that showed exactly the same liking/retweeting behavior over the period. To investigate whether any of these bins exhibited *coordinated inauthenthic behavior*, we were interested in whether bin size correlated with
 - user account deletion/suspension (we bought some likes at some point, and saw that the user accounts disappered rather quickly)
